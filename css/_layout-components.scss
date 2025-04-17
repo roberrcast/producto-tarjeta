@@ -1,1 +1,42 @@
 @use "./util";
+@use "./query";
+
+//Esto quita los colores predeterminados de Bootstrap de los títulos y texto
+.card {
+    --bs-card-color: unset;
+    --bs-card-title-color: unset;
+    color: inherit;
+}
+
+body {
+    font-family: util.$font !important;
+    color: util.$txtMainColor !important;
+}
+
+.products {
+    &__titleMain {
+        font-size: 3rem;
+        text-align: center;
+        margin: 5rem 0;
+
+        @include query.respond("768px") {
+            font-size: 2.5rem;
+        }
+
+        @include query.respond("450px") {
+            font-size: 1.9rem;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    &__modalBtnPrimary {
+        border: none;
+        background-color: util.$btnBg;
+        @include util.hoverButton;
+    }
+}

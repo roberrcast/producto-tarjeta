@@ -1,3 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+.card {
+  --bs-card-color: unset;
+  --bs-card-title-color: unset;
+  color: inherit;
+}
+
+body {
+  font-family: "Archivo", Helvetica, Arial, sans-serif !important;
+  color: #1f1f1f !important;
+}
+
+.products__titleMain {
+  font-size: 3rem;
+  text-align: center;
+  margin: 5rem 0;
+}
+@media (max-width: 768px) {
+  .products__titleMain {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 450px) {
+  .products__titleMain {
+    font-size: 1.9rem;
+  }
+}
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.products__modalBtnPrimary {
+  border: none;
+  background-color: #1a2a44;
+  transition: all 0.3s ease-out;
+}
+@media (hover: hover) {
+  .products__modalBtnPrimary:hover {
+    border: none;
+    background-color: #2ab7a9;
+    cursor: pointer;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
